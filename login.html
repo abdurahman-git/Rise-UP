@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In – RiseUP</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(140deg, var(--navy) 0%, var(--blue) 60%, var(--green) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .login-box {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      border-top: 5px solid var(--gold);
+      padding: 2.5rem 2.25rem;
+      width: 100%;
+      max-width: 400px;
+    }
+    .login-logo {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+    .login-logo .logo-text {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -.04em;
+    }
+    .login-logo .logo-text span {
+      color: var(--gold);
+    }
+    .login-logo p {
+      font-size: .82rem;
+      color: var(--text-muted);
+      margin-top: .25rem;
+    }
+    .login-box h2 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .demo-links {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--grey-light);
+      padding-top: 1.25rem;
+    }
+    .demo-links p {
+      font-size: .78rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: .6rem;
+    }
+    .demo-row {
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <div class="login-logo">
+      <div class="logo-text">Rise<span>UP</span></div>
+      <p>Football talent discovery platform</p>
+    </div>
+
+    <h2>Sign In</h2>
+
+    <form action="#" method="post" novalidate>
+
+      <div class="form-group">
+        <label for="email">Username / Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" name="role" class="form-control">
+          <option value="" disabled selected>Role Select</option>
+          <option value="guardian">Guardian (Parent / Carer)</option>
+          <option value="scout">Scout (Professional)</option>
+          <option value="admin">Admin (Platform Staff)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-full" style="justify-content:center; padding:.75rem; margin-top:.5rem; width:100%;">
+        Sign In
+      </button>
+    </form>
+
+    <p style="text-align:center; font-size:.85rem; margin-top:1rem; color:var(--text-muted);">
+      Don't have an account? <a href="register.html" style="color:var(--green); font-weight:600;">Register</a>
+    </p>
+
+    <div class="demo-links">
+      <p>Quick demo access:</p>
+      <div class="demo-row">
+        <a href="guardian-dashboard.html" class="btn btn-outline btn-sm" style="justify-content:center;">Guardian Dashboard</a>
+        <a href="scout-dashboard.html" class="btn btn-outline btn-sm" style="justify-content:center;">Scout Dashboard (Arsene Wenger)</a>
+        <a href="admin-dashboard.html" class="btn btn-outline btn-sm" style="justify-content:center;">Admin Panel (Beta)</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

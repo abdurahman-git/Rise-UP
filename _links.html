@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RiseUP – Dev Links</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0; }
+    .wrap { width: 100%; max-width: 480px; padding: 2rem; }
+    .logo { font-size: 2rem; font-weight: 900; color: #fff; letter-spacing: -.04em; margin-bottom: .25rem; }
+    .logo span { color: #f59e0b; }
+    .sub { font-size: .82rem; color: #64748b; margin-bottom: 2rem; }
+    h3 { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: #475569; font-weight: 700; margin: 1.5rem 0 .6rem; }
+    h3:first-of-type { margin-top: 0; }
+    a.link-btn {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #1e293b; border: 1px solid #334155; border-radius: 8px;
+      padding: .7rem 1rem; margin-bottom: .4rem; color: #e2e8f0;
+      text-decoration: none; font-size: .88rem; font-weight: 500;
+      transition: background .15s, border-color .15s;
+    }
+    a.link-btn:hover { background: #1e3a5f; border-color: #f59e0b; color: #fff; }
+    a.link-btn .icon { font-size: 1rem; margin-right: .65rem; }
+    a.link-btn .arrow { color: #475569; font-size: .8rem; }
+    a.link-btn:hover .arrow { color: #f59e0b; }
+    .note { font-size: .75rem; color: #475569; margin-top: 2rem; line-height: 1.6; border-top: 1px solid #1e293b; padding-top: 1rem; }
+    .note b { color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">Rise<span>UP</span></div>
+    <div class="sub">Dev navigation — open directly in browser, no Docker needed</div>
+
+    <h3>Public</h3>
+    <a class="link-btn" href="index.html"><span><span class="icon">&#127968;</span>Homepage</span><span class="arrow">&#8594;</span></a>
+    <a class="link-btn" href="login.html"><span><span class="icon">&#128274;</span>Login</span><span class="arrow">&#8594;</span></a>
+    <a class="link-btn" href="register.html"><span><span class="icon">&#128221;</span>Register</span><span class="arrow">&#8594;</span></a>
+
+    <h3>Guardian</h3>
+    <a class="link-btn" href="guardian-dashboard.html"><span><span class="icon">&#128100;</span>Guardian Dashboard</span><span class="arrow">&#8594;</span></a>
+
+    <h3>Scout</h3>
+    <a class="link-btn" href="scout-dashboard.html"><span><span class="icon">&#128269;</span>Scout Dashboard</span><span class="arrow">&#8594;</span></a>
+
+    <h3>Shared</h3>
+    <a class="link-btn" href="messages.html"><span><span class="icon">&#128172;</span>Messages</span><span class="arrow">&#8594;</span></a>
+    <a class="link-btn" href="admin-dashboard.html"><span><span class="icon">&#128272;</span>Admin Panel</span><span class="arrow">&#8594;</span></a>
+
+    <div class="note">
+      <b>Open without Docker:</b> right-click <code>_links.html</code> in VS Code → <b>Open with Live Server</b> or <b>Reveal in Finder</b> → double-click to open in browser.<br><br>
+      <b>Docker URL:</b> <code>http://localhost:8080</code>
+    </div>
+  </div>
+</body>
+</html>

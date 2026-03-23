@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout Dashboard – RiseUP</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .scout-banner {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-bottom: 4px solid var(--gold);
+      padding: 1.5rem 0;
+    }
+
+    .scout-banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .scout-banner-left h2 {
+      margin: 0;
+      color: var(--white);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .scout-banner-left p {
+      margin: 0.35rem 0 0;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(245,158,11,.2);
+      border: 1px solid rgba(245,158,11,.45);
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+    }
+
+    .scout-page {
+      padding: 2rem 0 3rem;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 1rem;
+    }
+
+    .player-card {
+      max-width: 720px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .player-card-header {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      padding: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .player-avatar {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 1.5rem;
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+      border: 4px solid rgba(255,255,255,.3);
+      flex-shrink: 0;
+    }
+
+    .player-card-header h3 {
+      margin: 0;
+      color: var(--white);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .player-card-header p {
+      margin: 0.35rem 0 0;
+      color: rgba(255,255,255,.72);
+      font-size: 0.9rem;
+    }
+
+    .player-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .player-tag {
+      display: inline-block;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--white);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.22);
+    }
+
+    .player-tag.gold {
+      color: var(--gold);
+      background: rgba(245,158,11,.18);
+      border-color: rgba(245,158,11,.4);
+    }
+
+    .player-card-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+    }
+
+    .player-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .detail-item .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .detail-item .value {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-box {
+      background: var(--light);
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      color: var(--text);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .reminder-box {
+      background: #fff8e7;
+      border: 1px solid #f5d487;
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+
+    .reminder-box h4 {
+      margin: 0 0 0.35rem;
+      font-size: 0.95rem;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .reminder-box p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .player-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .player-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="login.html" class="logo"><span class="logo-text">Rise<span>UP</span></span></a>
+      <nav class="site-nav">
+        <a href="scout-dashboard.html" class="active">Dashboard</a>
+        <a href="messages.html">Messages</a>
+        <a href="login.html" class="nav-cta">Sign Out</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="scout-banner">
+  <div class="container">
+    <div class="scout-banner-inner">
+      <div class="scout-banner-left">
+        <h2>Arsene Wenger</h2>
+        <p>Age 58</p>
+      </div>
+      <span class="verified-badge">&#10003; Verified Scout</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container scout-page">
+    <div class="section-title">Player Overview</div>
+
+    <div class="player-card">
+      <div class="player-card-header">
+        <div class="player-avatar">KR</div>
+        <div>
+          <h3>Kai Rooney</h3>
+          <p>North West London</p>
+          <div class="player-tags">
+            <span class="player-tag">Age 12</span>
+            <span class="player-tag">Left Winger</span>
+            <span class="player-tag gold">Looking for a Club</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-card-body">
+        <div class="player-details">
+          <div class="detail-item">
+            <span class="label">Name</span>
+            <span class="value">Kai Rooney</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Age</span>
+            <span class="value">12</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Location</span>
+            <span class="value">North West London</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Position</span>
+            <span class="value">Left Winger</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Current Status</span>
+            <span class="value">Looking for a Club</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Guardian Contact</span>
+            <span class="value">Managed by Parent/Guardian</span>
+          </div>
+        </div>
+
+        <div class="about-box">
+          Kai Rooney is a young left winger from North West London with a strong interest in developing his game and finding the right club environment. He enjoys taking on defenders, playing with confidence on the wing, and continuing to improve his movement and decision-making on the ball.
+        </div>
+
+        <div class="reminder-box">
+          <h4>&#128197; Reminder</h4>
+          <p>
+            Meeting set for <strong>22 March 2026</strong> via <strong>parent's phone call</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>&copy; 2026 RiseUP Ltd.</span>
+      <span><a href="#" style="color:rgba(255,255,255,.5);">Help</a> &bull; <a href="#" style="color:rgba(255,255,255,.5);">Safeguarding</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

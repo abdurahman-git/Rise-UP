@@ -1,0 +1,7 @@
+services:
+  riseup:
+    build: .
+    container_name: riseup-site
+    ports:
+      - "8080:80"
+    restart: unless-stopped

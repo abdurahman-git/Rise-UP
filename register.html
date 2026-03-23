@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – RiseUP</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(140deg, var(--navy) 0%, var(--blue) 60%, var(--green) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .register-wrap {
+      width: 100%;
+      max-width: 520px;
+      background: var(--white);
+      border-radius: 16px;
+      border-top: 5px solid var(--gold);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      overflow: hidden;
+    }
+    .reg-form-panel {
+      padding: 2.5rem 2rem;
+    }
+    .reg-form-panel h2 {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: .25rem;
+    }
+    .reg-form-panel > p {
+      font-size: .85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .role-checks {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .role-check-item {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      cursor: pointer;
+    }
+    .role-check-item input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--blue);
+      cursor: pointer;
+    }
+    .role-check-item label {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .helper-text {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-top: .35rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+<div class="register-wrap">
+
+  <div class="reg-form-panel">
+    <h2>Create Account</h2>
+    <p>Join RiseUP to start discovering or showcasing football talent.</p>
+
+    <form action="#" method="post" novalidate>
+
+      <div class="form-group">
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Adeyemi" required />
+      </div>
+
+      <div class="form-group">
+        <label for="reg-email">Email Address <span class="required">*</span></label>
+        <input type="email" id="reg-email" name="email" class="form-control" placeholder="you@example.com" required autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth <span class="required">*</span></label>
+        <input type="date" id="dob" name="dob" class="form-control" max="2008-03-14" required />
+        <p class="helper-text">You must be at least 18 years old to register.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-password">Password <span class="required">*</span></label>
+        <input type="password" id="reg-password" name="password" class="form-control" placeholder="••••••••" required autocomplete="new-password" />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password <span class="required">*</span></label>
+        <input type="password" id="confirm-password" name="confirm_password" class="form-control" placeholder="••••••••" required autocomplete="new-password" />
+      </div>
+
+      <div class="form-group">
+        <label style="margin-bottom:.6rem;">I am registering as: <span class="required">*</span></label>
+        <div class="role-checks">
+          <div class="role-check-item">
+            <input type="radio" id="role-guardian" name="reg_role" value="guardian" checked />
+            <label for="role-guardian">Guardian</label>
+          </div>
+          <div class="role-check-item">
+            <input type="radio" id="role-scout" name="reg_role" value="scout" />
+            <label for="role-scout">Scout</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms">I agree to the <a href="#" style="color:var(--blue);">Terms of Service</a> and <a href="#" style="color:var(--blue);">Privacy Policy</a></label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-navy w-full" style="justify-content:center; padding:.75rem; width:100%;">
+        Create Account
+      </button>
+    </form>
+
+    <p style="text-align:center; font-size:.85rem; margin-top:1rem; color:var(--text-muted);">
+      Already have an account? <a href="login.html" style="color:var(--blue); font-weight:600;">Sign In</a>
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
